@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activityTitle"
+        android:textColor="#ED686EC1"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+        <ImageView
+        android:id="@+id/imagenPelicula"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="41dp"
+        tools:srcCompat="@tools:sample/avatars"
+            android:layout_marginTop="@dimen/espacioElementos"
+            app:layout_constraintTop_toBottomOf="@id/tituloPrincipal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"/>
+            <!--android:scaleType="centerCrop"-->
+
+    <TextView
+        android:id="@+id/generoPelicula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewGeneroPelicula"
+        android:layout_marginTop="@dimen/espacioElementos"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="137dp"
+        app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generoPelicula"
+        android:layout_marginTop="@dimen/espacioElementos"
+        android:layout_marginStart="@dimen/marginStartRadioGroup"
+        android:checkedButton="@id/checkBox"
+        android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="78dp"
+        android:layout_height="43dp"
+        android:text="@string/terrorGenre"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="156dp"
+        app:layout_constraintTop_toBottomOf="@id/generoPelicula"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:checked="true"/>
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cienceGenre"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="199dp"
+        app:layout_constraintTop_toBottomOf="@id/radioButton"
+        app:layout_constraintLeft_toLeftOf="@id/radioButton"/>
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/romanceGenre"
+        tools:layout_editor_absoluteX="27dp"
+        app:layout_constraintStart_toStartOf="@id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@id/radioButton2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/duracionPelicula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movieDuration"
+        android:layout_marginTop="@dimen/espacioElementos"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="325dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkBoxText1"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="298dp"
+        android:layout_marginTop="@dimen/espacioElementos"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/duracionPelicula"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkBoxText2"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="298dp"
+        app:layout_constraintStart_toEndOf="@id/checkBox"
+        app:layout_constraintTop_toTopOf="@id/checkBox"/>
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkBoxText3"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="298dp"
+        app:layout_constraintStart_toEndOf="@id/checkBox2"
+        app:layout_constraintTop_toTopOf="@id/checkBox2"/>
+
+
+    <TextView
+        android:id="@+id/nombreActor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewNomActor"
+        android:layout_marginTop="@dimen/espacioElementos"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="379dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBox2"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espacioElementos"
+        android:hint="@string/textInputHint"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreActor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/anioPelicula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Año de la pelicula"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="379dp"
+        android:layout_marginTop="@dimen/espacioElementos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInput"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/espacioElementos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anioPelicula" />
+
+
+
+    <TextView
+        android:id="@+id/labelNumSug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelNumSug"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="379dp"
+        android:layout_marginTop="@dimen/espacioElementos"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/addSugerencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelNumSug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/espacioElementos"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/removeSugerencia"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/presence_busy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addSugerencia" />
+
+    <TextView
+        android:id="@+id/numeroSugerencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/removeSugerencia"
+        app:layout_constraintStart_toEndOf="@id/addSugerencia"
+        app:layout_constraintTop_toTopOf="@id/addSugerencia" />
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/removeSugerencia"
+        android:layout_marginTop="5dp"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="641dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Actividades</string>
+    <string name="textViewNomActor">Nombre de un actor que aparezca en la pelicula</string>
+    <string name="checkBoxText1">1 a 2 horas</string>
+    <string name="checkBoxText2">2 a 3 horas</string>
+    <string name="checkBoxText3">Más de 3 horas</string>
+    <string name="textInputHint">Nombre(s) Apellido(s)</string>
+    <string name="textButton">Buscar</string>
+    <string name="textViewGeneroPelicula">Genero de pelicula</string>
+    <string name="terrorGenre">Terror</string>
+    <string name="cienceGenre">Ciencia Ficción</string>
+    <string name="romanceGenre">Romance</string>
+    <string name="movieDuration">Duración de la pelicula</string>
+    <string name="activityTitle">Sugerenciador de peliculas</string>
+    <string name="labelNumSug">Número de sugerencias</string>
+
+    <string-array name="years">
+        <item>1990</item>
+        <item>1991</item>
+        <item>1992</item>
+        <item>1993</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+    </string-array>
+</resources>
